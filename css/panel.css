@@ -1,0 +1,8 @@
+table {
+	background: url('../images/background.jpg') center no-repeat;
+}
+
+.tag{
+	background-color: rgba(246,169,0,60%);
+    border-radius: 10px;
+}

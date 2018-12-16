@@ -1,0 +1,133 @@
+<html>
+<head>
+<title>element</title>
+<meta http-equiv="Content-Type" content="text/html; charset=gb2312">
+  <link rel="stylesheet" href="css/panel.css" />
+  <link rel="stylesheet" href="css/animate.min.css" />
+  <link rel="stylesheet" href="css/snow.css" />
+
+</head>
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+<!-- Save for Web Slices (element.png) -->
+<table id="table" style="display:none"
+id="__01" width="1921" height="1081" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td colspan="7">
+			<img src="images/element_01.png" width="1920" height="50" alt=""></td>
+		<td>
+			<img src="images/&#x5206;&#x9694;&#x7b26;.gif" width="1" height="50" alt=""></td>
+	</tr>
+	<tr>
+		<td rowspan="6">
+			<img src="images/element_02.png" width="72" height="1030" alt=""></td>
+		<td colspan="2">
+			<img class="renqitaocan" src="images/element_03.png" width="321" height="124" alt=""></td>
+		<td colspan="4" rowspan="2">
+			<img src="images/element_04.png" width="1527" height="264" alt=""></td>
+		<td>
+			<img src="images/&#x5206;&#x9694;&#x7b26;.gif" width="1" height="124" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="2" rowspan="3">
+			<img src="images/element_05.png" width="321" height="548" alt=""></td>
+		<td>
+			<img src="images/&#x5206;&#x9694;&#x7b26;.gif" width="1" height="140" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="2" rowspan="2">
+			<img src="images/element_06.png" width="793" height="408" alt=""></td>
+		<td>
+			<img src="images/element_07.png" width="76" height="59" alt=""></td>
+		<td rowspan="4">
+			<img src="images/element_08.png" width="658" height="766" alt=""></td>
+		<td>
+			<img src="images/&#x5206;&#x9694;&#x7b26;.gif" width="1" height="59" alt=""></td>
+	</tr>
+	<tr>
+		<td rowspan="3">
+			<img src="images/element_09.png" width="76" height="707" alt=""></td>
+		<td>
+			<img src="images/&#x5206;&#x9694;&#x7b26;.gif" width="1" height="349" alt=""></td>
+	</tr>
+	<tr>
+		<td rowspan="2">
+			<img src="images/element_10.png" width="255" height="358" alt=""></td>
+		<td colspan="2">
+			<img src="images/element_11.png" width="87" height="73" alt=""></td>
+		<td rowspan="2">
+			<img src="images/element_12.png" width="772" height="358" alt=""></td>
+		<td>
+			<img src="images/&#x5206;&#x9694;&#x7b26;.gif" width="1" height="73" alt=""></td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			<img src="images/element_13.png" width="87" height="285" alt=""></td>
+		<td>
+			<img src="images/&#x5206;&#x9694;&#x7b26;.gif" width="1" height="285" alt=""></td>
+	</tr>
+	<tr>
+		<td>
+			<img src="images/&#x5206;&#x9694;&#x7b26;.gif" width="72" height="1" alt=""></td>
+		<td>
+			<img src="images/&#x5206;&#x9694;&#x7b26;.gif" width="255" height="1" alt=""></td>
+		<td>
+			<img src="images/&#x5206;&#x9694;&#x7b26;.gif" width="66" height="1" alt=""></td>
+		<td>
+			<img src="images/&#x5206;&#x9694;&#x7b26;.gif" width="21" height="1" alt=""></td>
+		<td>
+			<img src="images/&#x5206;&#x9694;&#x7b26;.gif" width="772" height="1" alt=""></td>
+		<td>
+			<img src="images/&#x5206;&#x9694;&#x7b26;.gif" width="76" height="1" alt=""></td>
+		<td>
+			<img src="images/&#x5206;&#x9694;&#x7b26;.gif" width="658" height="1" alt=""></td>
+		<td></td>
+	</tr>
+</table>
+<video 
+muted
+id="video" 
+controls
+autoplay="autoplay"
+class="video-js"  
+preload="auto" 
+width="1920" height="1080"
+   data-setup="{}">
+    <source src="./video.mp4" type='video/mp4'>
+     <p class="vjs-no-js">
+      To view this video please enable JavaScript, and consider upgrading to a web browser that
+      <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+    </p>
+  </video>
+<!-- End Save for Web Slices -->
+<script src="./js/jquery-1.10.2.min.js"></script>
+<script src="./js/my.js"></script>
+<script>
+
+  $(document).ready(function(){
+function show(){
+	runAnim("renqitaocan","flipInX",
+		function(){
+			runAnim("dangjitexuan","slideInLeft")
+		});
+}
+setInterval(show,3000);
+
+
+var myPlayer=document.getElementById('video');
+
+myPlayer.addEventListener("ended",function(){
+	$("#table").show();
+	$("#video").hide();
+	setTimeout(function(){
+		$("#table").hide();
+		$("#video").show();
+		myPlayer.play();
+	},5000)	
+})
+
+
+  });
+
+</script>
+</body>
+</html>
